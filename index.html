@@ -23,15 +23,21 @@
     .goku {
       position: absolute;
       top: 30%;
-      left: -150px;
+      left: -150px; /* Inicia desde fuera de la pantalla */
       width: 80px;
-      animation: flyGoku 20s linear infinite;
+      animation: flyGoku 20s linear infinite; /* Animación infinita */
       z-index: 1;
     }
 
     @keyframes flyGoku {
-      0% { left: -150px; }
-      100% { left: 110%; }
+      0% { left: -150px; } /* Empieza fuera de la pantalla a la izquierda */
+      50% { left: 50%; }  /* Llega al centro de la pantalla */
+      100% { left: 100%; } /* Se mueve completamente fuera de la pantalla a la derecha */
+    }
+
+    /* Después de llegar al final, Goku vuelve a aparecer desde la izquierda */
+    .goku {
+      animation: flyGoku 20s linear infinite;
     }
 
     .menu {
@@ -118,7 +124,7 @@
 <body>
 
   <!-- Goku volando -->
-  <img class="goku" src="https://i.postimg.cc/vTwy7s6P/goku-flying.png" alt="Goku volando">
+  <img class="goku" src="https://www.pngkey.com/png/detail/139-1393347_goku-sprite-png.png" alt="Goku volando">
 
   <div class="menu">
     <!-- Foto de perfil -->
