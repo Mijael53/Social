@@ -20,35 +20,14 @@
       position: relative;
     }
 
-    .goku {
-      position: absolute;
-      top: 30%;
-      left: -150px; /* Inicia desde fuera de la pantalla */
-      width: 80px;
-      animation: flyGoku 20s linear infinite; /* Animación infinita */
-      z-index: 1;
-    }
-
-    @keyframes flyGoku {
-      0% { left: -150px; } /* Empieza fuera de la pantalla a la izquierda */
-      50% { left: 50%; }  /* Llega al centro de la pantalla */
-      100% { left: 100%; } /* Se mueve completamente fuera de la pantalla a la derecha */
-    }
-
-    /* Después de llegar al final, Goku vuelve a aparecer desde la izquierda */
-    .goku {
-      animation: flyGoku 20s linear infinite;
-    }
-
     .menu {
-      position: relative;
-      z-index: 2;
       background: rgba(0, 0, 0, 0.6);
       padding: 40px 30px;
       border-radius: 20px;
       backdrop-filter: blur(10px);
       box-shadow: 0 8px 32px rgba(0,0,0,0.5);
       max-width: 350px;
+      z-index: 2;
     }
 
     .profile-img {
@@ -57,7 +36,7 @@
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #fff;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       box-shadow: 0 0 10px #fff;
     }
 
@@ -67,14 +46,19 @@
       color: #fff;
       text-shadow: 0 2px 5px rgba(0,0,0,0.5);
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 8px;
+    }
+
+    .menu h2 img {
+      width: 22px;
+      height: 22px;
     }
 
     .description {
       font-size: 16px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       color: #ddd;
     }
 
@@ -105,9 +89,36 @@
       height: 28px;
     }
 
-    .verified-badge {
-      width: 22px;
-      height: 22px;
+    .plane, .cloud {
+      position: absolute;
+      top: 20%;
+      width: 60px;
+      animation: fly 20s linear infinite;
+      z-index: 1;
+    }
+
+    .cloud {
+      width: 100px;
+      opacity: 0.7;
+      animation: clouds 60s linear infinite;
+    }
+
+    @keyframes fly {
+      0% {
+        left: -100px;
+      }
+      100% {
+        left: 110%;
+      }
+    }
+
+    @keyframes clouds {
+      0% {
+        left: -150px;
+      }
+      100% {
+        left: 110%;
+      }
     }
 
     @media (max-width: 400px) {
@@ -123,25 +134,25 @@
 </head>
 <body>
 
-  <!-- Goku volando -->
-  <img class="goku" src="https://www.pngkey.com/png/detail/139-1393347_goku-sprite-png.png" alt="Goku volando">
+  <!-- Avión volando -->
+  <img class="plane" src="https://cdn-icons-png.flaticon.com/512/3043/3043126.png" alt="Avión">
 
+  <!-- Nubes -->
+  <img class="cloud" src="https://static.vecteezy.com/system/resources/previews/017/234/118/original/white-clouds-png.png" style="top:30%;" alt="Nube">
+  <img class="cloud" src="https://static.vecteezy.com/system/resources/previews/017/234/118/original/white-clouds-png.png" style="top:50%;" alt="Nube">
+
+  <!-- Menú de redes sociales -->
   <div class="menu">
-    <!-- Foto de perfil -->
     <img class="profile-img" src="https://i.postimg.cc/nrpf0cd3/descarga.png" alt="Foto de Mijael">
 
-    <!-- Nombre con verificado -->
-    <h2>
-      ERIK MIJAEL 
-      <img class="verified-badge" src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg" alt="Verificado">
+    <h2>ERIK MIJAEL 
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Blue_check.svg/1200px-Blue_check.svg.png" alt="Verificado">
     </h2>
 
-    <!-- Descripción personal -->
     <div class="description">
-     Autodidacta | Resiliente | Apasionado por la Tecnología
+      Autodidacta | Resiliente | Apasionado por la Tecnología
     </div>
 
-    <!-- Enlaces a redes -->
     <a href="https://www.facebook.com/emijael.mch" target="_blank">
       <img class="icon" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook Icon"> Facebook
     </a>
@@ -157,4 +168,4 @@
   </div>
 
 </body>
-      </html>
+</html>
