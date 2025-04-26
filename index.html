@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background: url('https://th.bing.com/th/id/R.d0d12d5b90c2909560449c93b8610eee?rik=xKaQ3tTKmygpPg&pid=ImgRaw&r=0') no-repeat center center fixed;
       background-size: cover;
       height: 100vh;
       display: flex;
@@ -38,17 +38,23 @@
     }
 
     .menu h2 {
-      margin-bottom: 25px;
+      margin-bottom: 10px;
       font-size: 28px;
       color: #fff;
       text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .description {
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #ddd;
     }
 
     .menu a {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 15px 0;
+      margin: 12px 0;
       font-size: 20px;
       color: #fff;
       text-decoration: none;
@@ -77,7 +83,7 @@
         padding: 30px 20px;
       }
       .menu a {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   </style>
@@ -85,11 +91,21 @@
 <body>
 
   <div class="menu">
-    <!-- Tu foto aquí -->
+    <!-- Foto -->
     <img class="profile-img" src="https://i.postimg.cc/nrpf0cd3/descarga.png" alt="Foto de Mijael">
 
-    <h2>ERIK MIJAEL</h2>
+    <!-- Nombre -->
+    <h2>
+  ERIK MIJAEL
+  <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="Verificado" style="width: 24px; height: 24px; vertical-align: middle; margin-left: 8px;">
+    </h2>
 
+    <!-- Descripción personal -->
+    <div class="description">
+      Aut. | Resiliente | Apasionado por la Tecnología
+    </div>
+
+    <!-- Enlaces -->
     <a href="https://www.facebook.com/emijael.mch" target="_blank">
       <img class="icon" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook Icon"> Facebook
     </a>
@@ -102,7 +118,8 @@
     <a href="https://twitter.com/ErikMijael" target="_blank">
       <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter Icon"> Twitter
     </a>
+
   </div>
 
 </body>
-</html>
+  </html>
